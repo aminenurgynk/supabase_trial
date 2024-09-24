@@ -3,8 +3,6 @@
 import Link from "next/link";
 import { redirect } from "next/navigation";
 import { createClient } from "../../utils/supabase/server";
-// import { signup } from "@/actions/auth/actions";
-
 import { Label } from "@/components/ui/label";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
@@ -14,6 +12,7 @@ import {
   CardFooter,
   Card,
 } from "@/components/ui/card";
+import { signup } from "@/actions/auth/actions";
 
 export default async function SignUpPage() {
   const supabase = createClient();
@@ -50,7 +49,7 @@ export default async function SignUpPage() {
               <Label htmlFor="password">Password</Label>
               <Input id="password" name="password" required type="password" />
             </div>
-            <Button className="w-full">Sign Up</Button>
+            <Button formAction={signup} className="w-full">Sign Up</Button>
           </form>
         </CardContent>
         <CardFooter className="flex flex-col space-y-2">
