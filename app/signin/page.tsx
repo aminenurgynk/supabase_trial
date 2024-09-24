@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { redirect } from "next/navigation";
-import { createClient } from "../utils/supabase/server";
+import { createClient } from "../../utils/supabase/server";
 // import { signin } from "@/actions/auth/actions";
 
 import { Label } from "@/components/ui/label";
