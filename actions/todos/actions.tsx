@@ -101,7 +101,7 @@ export async function onCheckChange(todo: Todo) {
   const supabase = createClient();
 
   const { error } = await supabase
-    .from("todos")
+    .from("todoss")
     .update({ is_complete: !todo?.is_complete })
     .eq("id", todo?.id)
     .select();
