@@ -53,7 +53,7 @@ export default async function SignUpPage() {
           </form>
         </CardContent>
         <CardFooter className="flex flex-col space-y-2">
-          <Link className="text-sm underline" href="/signin">
+          <Link className="text-sm underline" href="/sign-in">
             Already have an account? Sign In
           </Link>
         </CardFooter>
